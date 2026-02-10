@@ -30,6 +30,7 @@ https://medicalai-chatbot.vercel.app/
 ---
 
 ## 📂 Project Structure
+
 Medical-AI-Chatbot/
 │
 ├── public/                  # Static assets
@@ -55,5 +56,3 @@ Medical-AI-Chatbot/
 │
 └── node_modules/            # Installed dependencies (ignored in GitHub)
 
-
-## 📂 Project Structure
