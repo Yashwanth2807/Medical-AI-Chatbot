@@ -1,0 +1,14 @@
+# Node
+node_modules/
+
+# Python
+__pycache__/
+.env
+
+# ML / AI
+models/
+data/
+
+# OS / Editor
+.vscode/
+.DS_Store

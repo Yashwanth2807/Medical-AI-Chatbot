@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* --- Professional Medical Palette --- */
+
+  /* Primary Actions & Brand */
+  --primary: #0284c7;
+  /* Sky 600 - Trustworthy Blue */
+  --primary-hover: #0369a1;
+  /* Sky 700 - Deeper interaction state */
+  --primary-subtle: #e0f2fe;
+  /* Sky 100 - Backgrounds/Hovers */
+
+  /* System Accents */
+  --secondary: #0f766e;
+  /* Teal 700 - Calm Authority */
+  --accent: #ef4444;
+  /* Red 500 - Alert/Urgent */
+  --success: #10b981;
+  /* Emerald 500 - Positive status */
+  --warning: #f59e0b;
+  /* Amber 500 - Caution */
+
+  /* Surface & Backgrounds */
+  --bg-app: #f8fafc;
+  /* Slate 50 - Soft light background (reduced glare) */
+  --bg-surface: #ffffff;
+  /* Pure White - Cards/Modals */
+  --bg-surface-alt: #f1f5f9;
+  /* Slate 100 - Alternative sections */
+
+  /* Typography & Readability (WCAG AA Compliant) */
+  --text-main: #0f172a;
+  /* Slate 900 - High contrast headings */
+  --text-body: #334155;
+  /* Slate 700 - Optimized for long reading */
+  --text-dim: #64748b;
+  /* Slate 500 - Metadata/Support text */
+  --text-on-primary: #ffffff;
+
+  /* UI Structure */
+  --border-light: #e2e8f0;
+  /* Slate 200 - Subtle definition */
+  --border-focus: #38bdf8;
+  /* Sky 400 - Clear focus ring */
+
+  /* Shadows & Depth */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+  /* Spacing & Radius */
+  --radius-sm: 0.375rem;
+  /* 6px */
+  --radius-md: 0.5rem;
+  /* 8px - Standard component radius */
+  --radius-lg: 0.75rem;
+  /* 12px - Card/Container radius */
+
+  --header-height: 72px;
+  /* Standard accessible height */
+
+  /* Animation */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Base Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-app);
+  color: var(--text-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+/* Typography Foundation */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-main);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  /* Tighter for headings */
+}
+
+h1 {
+  font-size: 2.25rem;
+}
+
+h2 {
+  font-size: 1.875rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--primary-hover);
+  text-decoration: underline;
+}
+
+/* Focus Management for Accessibility */
+:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+/* Utility: Cards */
+.card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-smooth);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+/* Utility: Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.625rem 1.25rem;
+  /* ~10px 20px */
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  font-size: 0.9375rem;
+  /* 15px */
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border: 1px solid transparent;
+  gap: 0.5rem;
+  line-height: 1.25rem;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--text-on-primary);
+  border-color: transparent;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  text-decoration: none;
+}
+
+.btn-secondary {
+  background-color: var(--bg-surface);
+  color: var(--text-main);
+  border-color: var(--border-light);
+}
+
+.btn-secondary:hover {
+  background-color: var(--bg-surface-alt);
+  border-color: var(--text-dim);
+  text-decoration: none;
+}
+
+/* Utility: Container */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Text Utilities */
+.text-dim {
+  color: var(--text-dim);
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  /* Slate 300 */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+  /* Slate 400 */
+}
